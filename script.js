@@ -1,3 +1,5 @@
+let color = ''
+
 const gridGenerator = gridSize => {
   const container = document.querySelector(".grid-container");
   let gridItem = container.querySelectorAll('div')
@@ -10,6 +12,7 @@ const gridGenerator = gridSize => {
 
   for (i = 0; i < size; i++) {
     let newSquare = document.createElement("div");
+    newSquare.addEventListener('mouseover', squareColor)
     newSquare.style.border = '1px solid black'
     newSquare.classList.add("grid-item");
     container.insertAdjacentElement('beforeend', newSquare);
@@ -25,3 +28,14 @@ const changeSize = input => {
     }
 };
 
+function squareColor (){
+    if (color === 'random'){
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)` 
+    }else{
+    this.style.backgroundColor = color
+    }
+}
+
+const changeColor = (colorChoice) => {
+    color = colorChoice
+}
