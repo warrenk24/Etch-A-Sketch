@@ -56,3 +56,10 @@ document.querySelector('body').addEventListener('click', (e) => {
         }
     }
 })
+
+const reset = () => {
+    let container = document.querySelector(".grid-container");
+    let squares = container.querySelectorAll('div')
+    squares.forEach(div => div.style.backgroundColor = "white")
+}
+
