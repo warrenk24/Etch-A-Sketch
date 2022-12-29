@@ -1,4 +1,6 @@
 let color = ''
+let isclicking = true
+
 
 const gridGenerator = gridSize => {
   const container = document.querySelector(".grid-container");
@@ -29,13 +31,28 @@ const changeSize = input => {
 };
 
 function squareColor (){
+    if(isclicking) {
     if (color === 'random'){
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)` 
     }else{
     this.style.backgroundColor = color
     }
 }
+}
 
 const changeColor = (colorChoice) => {
     color = colorChoice
 }
+
+document.querySelector('body').addEventListener('click', (e) => {
+    
+    if (e.target.tagName != 'BUTTON'){
+        isclicking = !isclicking
+        if(isclicking){
+            document.querySelector('.mode').textContent = "Current Mode: Coloring"
+        }else {
+            document.querySelector('.mode').textContent = "Current Mode: Not Coloring"
+    
+        }
+    }
+})
