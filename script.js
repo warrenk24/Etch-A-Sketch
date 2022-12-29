@@ -1,4 +1,4 @@
-const gridGenerator = (gridSize) => {
+const gridGenerator = gridSize => {
   const container = document.querySelector(".grid-container");
   let gridItem = container.querySelectorAll('div')
   gridItem.forEach(div => {
@@ -17,6 +17,11 @@ const gridGenerator = (gridSize) => {
 };
 
 const changeSize = input => {
+    if(input >= 2 && input <= 100){
     gridGenerator(input)
+    }
+    else{
+        console.log("number but be between 2-100")
+    }
 };
 
