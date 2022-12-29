@@ -1,11 +1,15 @@
-const container = document.querySelector(".grid-container");
-
 const gridGenerator = (num) => {
+  const container = document.querySelector(".grid-container");
+  container.style.gridTemplateRows = 'repeat(16, 1fr)'
+  container.style.gridTemplateColumns = 'repeat(16, 1fr)'
+
   for (i = 0; i < num; i++) {
-    const newSquare = document.createElement("div");
-    newSquare.className = "grid-item";
-    container.appendChild(newSquare);
+    let newSquare = document.createElement("div");
+    newSquare.style.border = '1px solid red'
+    newSquare.classList.add("grid-item");
+    container.insertAdjacentElement('beforeend', newSquare);
   }
 };
 
 gridGenerator(256);
+
