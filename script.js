@@ -1,5 +1,7 @@
+
 let color = ''
 let isclicking = true
+
 
 
 const gridGenerator = gridSize => {
@@ -15,7 +17,7 @@ const gridGenerator = gridSize => {
   for (i = 0; i < size; i++) {
     let newSquare = document.createElement("div");
     newSquare.addEventListener('mouseover', squareColor)
-    newSquare.style.border = '1px solid black'
+    
     newSquare.classList.add("grid-item");
     container.insertAdjacentElement('beforeend', newSquare);
   }
@@ -59,7 +61,12 @@ document.querySelector('body').addEventListener('click', (e) => {
 
 const reset = () => {
     let container = document.querySelector(".grid-container");
-    let squares = container.querySelectorAll('div')
-    squares.forEach(div => div.style.backgroundColor = "white")
+    let squares = container.querySelectorAll('div');
+    squares.forEach(div => div.style.backgroundColor = "white");
 }
 
+function displayGrid() {
+    let container = document.querySelector(".grid-container");
+    let squares = container.querySelectorAll('div');
+    squares.forEach(div => div.classList.toggle("hide-grid"));
+}

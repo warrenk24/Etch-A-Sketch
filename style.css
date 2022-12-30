@@ -8,9 +8,19 @@ body {
     padding: 0;
     margin: 0;
     border: 1px solid red;
+    
 }
 .grid-container {
+
     display: grid;
     height: 500px;
     width: 500px;
+    
+}
+.grid-item {
+    border: 1px solid blue;
+}
+ 
+.hide-grid {
+    border: none;
 }
