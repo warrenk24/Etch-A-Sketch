@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Etch-A-Sketch</title>
   </head>
   <body>
     <div class="main-container">
       <header>
-        <h1>Cyber Sketch</h1>
+        <h1 data-text="&nbsp;Cyber Sketch&nbsp;">&nbsp;Cyber Sketch&nbsp;</h1>
       </header>
       <div class="bottom-section">
         <div class="button-container">
-          <button onclick="changeColor('black')">Black</button>
-          <button onclick="changeColor('red')">Red</button>
-          <button onclick="changeColor('white')">Erase</button>
-          <button onclick="changeColor('random')">Random</button>
-          <button onclick="reset()">Reset</button>
-          <button onclick="displayGrid()">Lines</button>
+          <button class="btn" onclick="changeColor('white')">White</button>
+          <button class="btn" onclick="changeColor('blue')">Blue</button>
+          <button class="btn" onclick="changeColor('black')">Erase</button>
+          <button class="btn" onclick="changeColor('random')">Random</button>
+          <button class="btn" onclick="reset()">Reset</button>
+          <button class="btn" onclick="displayGrid()">Grid Lines</button>
         </div>
         <div class="main-content">
           <div class="grid-container"></div>
@@ -30,7 +30,7 @@
               value="16"
               onchange="changeSize(this.value)"
             />
-            <button>click me</button>
+            <button class="grid-button">Grid Size</button>
           </div>
           <div class="mode">Current Mode:</div>
         </div>
