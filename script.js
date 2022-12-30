@@ -24,7 +24,7 @@ const changeSize = (input) => {
   if (input >= 2 && input <= 100) {
     gridGenerator(input);
   } else {
-    console.log("number but be between 2-100");
+    modeDisplay("number but be between 2-100");
   }
 };
 
@@ -64,4 +64,12 @@ function displayGrid() {
   let container = document.querySelector(".grid-container");
   let squares = container.querySelectorAll("div");
   squares.forEach((div) => div.classList.toggle("hide-grid"));
+}
+
+function modeDisplay(errorText){
+  const mode = document.querySelector('.mode')
+  const errorMessage = document.createElement('p');
+  errorMessage.textContent = errorText
+  mode.append(errorMessage)
+  
 }

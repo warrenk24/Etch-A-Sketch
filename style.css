@@ -39,12 +39,9 @@ body {
 }
 .grid-container {
   display: grid;
- 
   height: 800px;
   width: 800px;
-  box-shadow:  0 0.5em 0.5em var(--clr-neon),
-  0 0 0.5em var(--clr-neon);
-
+  box-shadow: 0 0.5em 0.5em var(--clr-neon), 0 0 0.5em var(--clr-neon);
 }
 .button-container {
   flex-basis: 40%;
@@ -53,7 +50,6 @@ body {
   align-items: flex-end;
   justify-content: center;
   gap: 50px;
-  
 }
 
 header {
@@ -83,8 +79,10 @@ input {
 }
 
 .mode {
+  font-size: 2em;
   text-align: center;
   margin-top: 50px;
+  color: var(--clr-neon);
 }
 
 .btn {
@@ -125,11 +123,11 @@ input {
   opacity: 0.7;
 }
 .grid-button {
-    cursor: pointer;
-    padding: 1px 20px;
-    background-color: black;
-    color: var(--clr-neon);
-    border: 1px solid var(--clr-neon);
+  cursor: pointer;
+  padding: 1px 20px;
+  background-color: black;
+  color: var(--clr-neon);
+  border: 1px solid var(--clr-neon);
 }
 
 h1 {
@@ -137,7 +135,6 @@ h1 {
   font-size: 5em;
   position: relative;
   color: #222;
-  
 }
 h1::before {
   content: attr(data-text);
